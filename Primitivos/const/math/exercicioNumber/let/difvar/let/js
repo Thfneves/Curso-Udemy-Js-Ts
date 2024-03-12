@@ -1,5 +1,0 @@
-Diferenca entre var e let.
-sempre que usarmos uma variavel primitiva nao podemos repetir o mesmo nome desse estado primitivo.
-Sempre usar variaveis com nomes diferentes.
-let nomealunno; // sem declarar nadaelefica como undefinido, nao aponta para nenghuma memoria
-let sobrenomeAluno= nll // nulo nao aponta para local nenhum.
