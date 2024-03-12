@@ -1,6 +1,6 @@
 function meuEscopo() {
   const form = document.querySelector(".form");
-  const resultado = document.querySelector("resultado");
+  const resultado = document.querySelector(".resultado");
 
   const pessoas = [];
   function recebeEventoForm(evento) {
@@ -12,12 +12,21 @@ function meuEscopo() {
     const sobrenome = form.querySelector(".sobrenome");
     const peso = form.querySelector(".peso");
     const altura = form.querySelector(".altura");
-    const resultado = [nome, sobrenome, peso, altura, resultado];
-    console.log[nome];
+
+    pessoas.push({
+      nome: nome.value,
+      sobrenome: sobrenome.value,
+      peso: peso.value,
+      altura: altura.value,
+    });
+    console.log(pessoas);
+
+    resultado.innerHTML =
+      `<p> ${nome.value}` +
+      `${sobrenome.value}` +
+      `${peso.value}${altura.value}</p>`;
+    //para que apareca no console.loge preciso usarmos o value no console.log dessa forma o site salva a informacao.
   }
-
-  //para que apareca no console.loge preciso usarmos o value no console.log dessa forma o site salva a informacao.
-
   form.addEventListener("submit", recebeEventoForm);
 }
 meuEscopo();
