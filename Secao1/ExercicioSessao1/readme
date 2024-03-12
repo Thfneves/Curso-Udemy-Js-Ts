@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<section>
+    <form  class="form" action="" method="get">
+        <p>Nome:<input type="text" class="name"></p>
+        <p>Sobre nome:<input type="text" class="SobreNome"></p>
+        <p>Peso:<input type="text" class="Peso"></p>
+        <p>Altura:<input type="text" class="Altura"></p>
+        <button>Enviar</button>
+    </form>
+</section>
+
+<body>
+    <script src="../ExercicioSessao1/index.js"></script>
+</body>
+</html>
+Da maneira que esta, o formulario na hora que apertamos o botao enviar,
+e resetada a pagina, nao queremos isso,
