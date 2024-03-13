@@ -1,0 +1,37 @@
+.menu{
+ 
+display: flex
+}
+
+.form{
+    background-color: aqua;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-left: 100px;
+
+  
+}
+.form input{
+    margin-left: 80px;
+    align-items: center;
+padding-left: 80px;
+margin-top: 10px;
+
+}
+
+.imc{
+padding-top: 40px;
+}
+.Retorno{
+margin-left: 200px;
+margin-top: 100px;
+
+}
+.alerta{
+    padding-left: 180px;
+    font: 800;
+    font-size: 20px;
+}
+.resultados{
+    background-color: blue;
+}
