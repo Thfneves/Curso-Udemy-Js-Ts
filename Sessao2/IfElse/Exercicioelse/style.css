@@ -1,6 +1,6 @@
 .menu{
  
-display: flex
+display: flex;
 }
 
 .form{
@@ -31,7 +31,4 @@ margin-top: 100px;
     padding-left: 180px;
     font: 800;
     font-size: 20px;
-}
-.resultados{
-    background-color: blue;
 }

@@ -9,20 +9,17 @@ function meuEscopo() {
     //abaixo estamos especificando quais elementos do form queremos, puxando eles pela classe.
 
     const nome = form.querySelector(".nome");
-
     const peso = form.querySelector(".peso");
     const altura = form.querySelector(".altura");
 
     pessoas.push({
       nome: nome.value,
-
       peso: peso.value,
       altura: altura.value,
     });
     console.log(pessoas);
 
-    resultado.innerHTML =
-      `<p> ${nome.value}` + `${peso.value}${altura.value}</p>`;
+    resultado.innerHTML = `<p> Olá: ${nome.value} seu peso é de  ${peso.value} e sua altura ${altura.value}</p>`;
     //para que apareca no console.loge preciso usarmos o value no console.log dessa forma o site salva a informacao.
   }
   form.addEventListener("submit", recebeEventoForm);
