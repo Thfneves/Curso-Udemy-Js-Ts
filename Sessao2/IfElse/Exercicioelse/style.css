@@ -1,40 +1,39 @@
-.menu{
- 
-display: flex;
+.menu {
+  display: flex;
 }
 
-.form{
-    background-color: aqua;
+.form {
+  background-color: aqua;
   margin-right: 100px;
   margin-left: 100px;
   padding-left: 100px;
-
-  
 }
-.form input{
-    margin-left: 80px;
-    align-items: center;
-padding-left: 80px;
-margin-top: 10px;
-
+.form input {
+  margin-left: 80px;
+  align-items: center;
+  padding-left: 80px;
+  margin-top: 10px;
 }
 
-.imc{
-padding-top: 40px;
+.imc {
+  margin-left: 400px;
+  font-size: 20px;
 }
-.Retorno{
-margin-left: 200px;
-margin-top: 100px;
+.Retorno {
+  margin-left: 200px;
+  font-size: 20px;
+}
+.alerta {
+  padding-left: 180px;
+  font: 800;
+  font-size: 20px;
+}
 
+.paragrafo-resultado,
+.bad {
+  background-color: blueviolet;
+  padding: 10px 20px;
 }
-.alerta{
-    padding-left: 180px;
-    font: 800;
-    font-size: 20px;
-}
-
-.paragrafo-resultado{
-    background-color: blueviolet;
-    padding: 10px 20px;
-    
+.bad {
+  background-color: rgb(145, 41, 41);
 }
