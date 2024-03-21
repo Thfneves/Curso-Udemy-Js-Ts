@@ -7,31 +7,31 @@ function getTimeFromSeconds(segundos) {
 }
 
 const relogio = document.querySelector(`.relogio`);
-const iniciar = document.querySelector(`.iniciar`);
-const pausar = document.querySelector(`.pausar`);
-const resetar = document.querySelector(`.resetar`);
+
 let segundos = 0;
 let timer;
 
 function iniciaRelogio() {
-  const timer = setInterval(function () {
+  timer = setInterval(function () {
     segundos++;
     relogio.innerHTML = getTimeFromSeconds(segundos);
   }, 1000);
 }
-
-iniciar.addEventListener(`click`, function (event) {
-  relogio.classList.remove();
-  clearInterval(timer);
-  iniciaRelogio();
-});
-
-pausar.addEventListener(`click`, function (event) {
-  clearInterval(timer);
-});
-
-resetar.addEventListener(`click`, function (event) {
-  clearInterval(timer);
-  relogio.innerHTML = `00:00:00`;
-  segundos = 0;
+document.addEventListener(`click`, function (e) {
+  const el = e.target;
+  if (el.classList.contains(`resetar`)) {
+    clearInterval(timer);
+    relogio.innerHTML = `00:00:00`;
+    relogio.classList.remove(`pausado`);
+    segundos = 0;
+  }
+  if (el.classList.contains(`iniciar`)) {
+    relogio.classList.remove(`pausado`);
+    clearInterval(timer);
+    iniciaRelogio();
+  }
+  if (el.classList.contains(`pausar`)) {
+    clearInterval(timer);
+    relogio.classList.add(`pausado`);
+  }
 });
