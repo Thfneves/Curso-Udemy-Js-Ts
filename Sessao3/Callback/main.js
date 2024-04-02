@@ -8,19 +8,28 @@ function rand(min = 1000, max = 3000) {
 function f1(callback) {
   setTimeout(function () {
     console.log(`f1`);
+    //callback e para chamar a funcao, se callback for chamada nesse bloco de codigo ele retorna para o bloco de codigo
+    if (callback) callback();
   }, rand());
 }
 function f3(callback) {
   setTimeout(function () {
     console.log(`f3`);
+    if (callback) callback();
   }, rand());
 }
 function f2(callback) {
   setTimeout(function () {
     console.log(`f2`);
+    if (callback) callback();
   }, rand());
 }
-f1();
-f2();
-f3();
-console.log(`òla mundo`);
+f1(function () {
+  f2(function () {
+    f3(function () {
+      console.log(`ola mundo`);
+    });
+  });
+  //aqui criamos uma funcao dentro de oura, criando  uma ordem, primeiroo. sistema executa f1 e depois vai para f2 e assim para f3.
+  //Praticamente estamos chamando callback atras de callback.
+});
